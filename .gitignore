@@ -1,9 +1,13 @@
+# Node modules
+node_modules/
+
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # Runtime data
 pids
@@ -15,39 +19,35 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
-coverage
+coverage/
 *.lcov
 
 # nyc test coverage
-.nyc_output
+.nyc_output/
 
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
+.grunt/
 
 # Bower dependency directory (https://bower.io/)
-bower_components
+bower_components/
 
-# node-waf configuration
-.lock-wscript
+# Compiled source
+dist/
+build/
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
-
-# Snowpack dependency directory (https://snowpack.dev/)
-web_modules/
-
-# TypeScript cache
+# TypeScript
 *.tsbuildinfo
+tsconfig.tsbuildinfo
+*.tscache
 
 # Optional npm cache directory
 .npm
 
 # Optional eslint cache
 .eslintcache
+
+# Optional stylelint cache
+.stylelintcache
 
 # Microbundle cache
 .rpt2_cache/
@@ -68,29 +68,45 @@ web_modules/
 .env
 .env.test
 .env.production
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
 
 # next.js build output
 .next/
 
-# Gatsby files
-.cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
-# public
+# Nuxt.js build / generate output
+.nuxt
+dist
 
-# vuepress build output
-.vuepress/dist
+# Expo
+.web/
+.expo/
 
-# vue.js build output
-dist/
-# Comment in the public line in if your project uses Vue and not Nuxt.js
-# public
+# Serverless directories
+.serverless/
 
-# Storybook build outputs
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Storybook files
 .out/
-.storybook-out/
+.storybook/
+storybook-static/
 
-# Webpack files
-webpack.config.js
+# VS Code
+.vscode/
 
 # IntelliJ IDEA
 .idea/
@@ -98,102 +114,65 @@ webpack.config.js
 *.iml
 *.ipr
 
-# VS Code
-.vscode/
+# WebStorm
+.idea/
+*.iws
+*.iml
+*.ipr
 
-# Optional: add your IDE settings, e.g.
-# .idea/
-# .vscode/
-# .sublime-project
-# .sublime-workspace
+# Svelte
+public/build/
 
-# SvelteKit build output
-.svelte-kit/
+# Sapper
+__sapper__/
 
-# Compiled JavaScript
-*.js
+# Firebase
+.firebaserc
+.firebase/
+.firebasecache/
+.firebaserc
 
-# Compiled Dynamic libs
-*.so
+# Vue.js
+node_modules/
+dist/
+*.local
 
-# Compiled Objective-C files
-*.o
-*.dylib
-
-# Compiled Static libs
-*.a
-
-# Compiled TeX files
-*.aux
-*.lof
-*.log
-*.lot
-*.fls
-*.out
-*.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
-*.glo
-*.gls
-*.idx
-*.ilg
-*.ind
-*.ist
-*.acn
-*.acr
-*.alg
-*.bbl
-*.blg
-*.brf
-*.fdb_latexmk
-*.synctex
-*.synctex.gz
-*.run.xml
-*.thm
-
-# Backup files
-*.bak
-*.swp
-*~
-*.tmp
-*.temp
-
-# Hidden files and directories
-.*.swp
-.fuse_hidden*
-*/.fuse_hidden*
-*/.nfs*
-
-# Directory files
-# Thumbnails
-*.directory
-
-# Environment variables
-.env
+# Nuxt.js
+.nuxt/
+dist/
 .env.*
 
-# pyright
-.pyright/
+# Sapper
+__sapper__/
 
-# nuxt.js
+# static
+static/
+
+# Gridsome
+src/.temp/
+src/.cache/
+public/
+
+# Nuxt.js
 .nuxt/
+dist/
 
-# next.js
-.next/
+# Docusaurus
+build/
 
-# cache
-.cache/
+# HUGO
+resources/_gen/
 
-# npm
-npm-debug.log*
+# Others
+.DS_Store
+Thumbs.db
 
-# yeoman
-.yo-rc.json
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
 
-# turbo
-turbo/
-
-# lerna
-lerna-debug.log*
+# Windows
+Thumbs.db
+ehthumbs.db
